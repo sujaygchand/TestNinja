@@ -20,9 +20,7 @@ namespace TestNinja.UnitTests
 		[TestCase(-1)]
 		public void GetCustomer_IdLessThanOne_ReturnNotFound(int id)
 		{
-			var controller = new CustomerController();
-
-			var result = controller.GetCustomer(id);
+			var result = _controller.GetCustomer(id);
 
 			Assert.That(result, Is.TypeOf<NotFound>());
 		}
@@ -33,9 +31,7 @@ namespace TestNinja.UnitTests
 		[TestCase(3009)]
 		public void GetCustomer_IdGreaterThanZero_ReturnOk(int id)
 		{
-			var controller = new CustomerController();
-
-			var result = controller.GetCustomer(id);
+			var result = _controller.GetCustomer(id);
 
 			Assert.That(result, Is.TypeOf<Ok>());
 		}
