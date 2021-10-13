@@ -61,6 +61,7 @@
     <Compile Include="HtmlFormatterTests.cs" />
     <Compile Include="CustomerControllerTests.cs" />
     <Compile Include="FizzBuzzTests.cs" />
+    <Compile Include="DemeritPointsCalculatorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
