@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System.Collections.Generic;
 using TestNinja.Fundamentals;
 
 namespace TestNinja.UnitTests
@@ -34,6 +35,19 @@ namespace TestNinja.UnitTests
 			var result = _math.Max(2, 1);
 
 			Assert.That(result, Is.EqualTo(2));
+		}
+
+		[Test]
+		[TestCase(5, new[] { 1, 3, 5 })]
+		[TestCase(6, new[] { 1, 3, 5 })]
+		[TestCase(9, new[] { 1, 3, 5, 7, 9 })]
+		public void GetOddNumbers_LimitIsGreaterThanZero_ReturnOddNumbersToLimit(int limit, IEnumerable<int> expectedResult)
+		{
+			var result = _math.GetOddNumbers(limit);
+
+			Assert.That(result, Is.EquivalentTo(expectedResult));
+			Assert.That(result, Is.Ordered);
+			Assert.That(result, Is.Unique);
 		}
 	}
 }
