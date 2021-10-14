@@ -54,15 +54,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ErrorLoggerTests.cs" />
-    <Compile Include="ReservationTests.cs" />
+    <Compile Include="Fundamentals\CustomerControllerTests.cs" />
+    <Compile Include="Fundamentals\DemeritPointsCalculatorTests.cs" />
+    <Compile Include="Fundamentals\ErrorLoggerTests.cs" />
+    <Compile Include="Fundamentals\FizzBuzzTests.cs" />
+    <Compile Include="Fundamentals\HtmlFormatterTests.cs" />
+    <Compile Include="Fundamentals\MathTests.cs" />
+    <Compile Include="Fundamentals\ReservationTests.cs" />
+    <Compile Include="Fundamentals\StackTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MathTests.cs" />
-    <Compile Include="HtmlFormatterTests.cs" />
-    <Compile Include="CustomerControllerTests.cs" />
-    <Compile Include="FizzBuzzTests.cs" />
-    <Compile Include="DemeritPointsCalculatorTests.cs" />
-    <Compile Include="StackTests.cs" />
+    <Compile Include="Mocking\VideoServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -73,6 +74,7 @@
       <Name>TestNinja</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
